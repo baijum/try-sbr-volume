@@ -1,0 +1,7 @@
+---
+apiVersion: "stable.example.com/v1"
+kind: Backend
+metadata:
+  name: backend-demo
+spec:
+  host: example.com

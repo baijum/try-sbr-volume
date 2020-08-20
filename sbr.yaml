@@ -1,0 +1,18 @@
+apiVersion: apps.openshift.io/v1alpha1
+kind: ServiceBindingRequest
+metadata:
+  name: binding-request
+spec:
+  envVarPrefix: qiye111
+  applicationSelector:
+    resourceRef: demo-appconfig
+    group: stable.example.com
+    version: v1
+    resource: appconfigs
+  backingServiceSelectors:
+    - group: stable.example.com
+      version: v1
+      kind: Backend
+      resourceRef: backend-demo
+      id: zzz
+      envVarPrefix: qiye
