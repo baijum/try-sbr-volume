@@ -1,6 +1,6 @@
 # Using Volume with SBR
 
-using a custom resource:
+## using a custom resource:
 
 ```
 export KUBECONFIG=</path/to/kubeconfig>
@@ -19,7 +19,7 @@ Check the appconfig:
 kubectl get appconfig  demo-appconfig -o yaml
 ```
 
-using a deployment:
+## using a deployment:
 
 ```
 export KUBECONFIG=</path/to/kubeconfig>
