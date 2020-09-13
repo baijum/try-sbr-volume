@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo-deployment
+  namespace: default
 spec:
   selector:
     matchLabels:
@@ -13,7 +14,7 @@ spec:
         app: demo
     spec:
       containers:
-        - name: hello-world
-          image: yusufkaratoprak/kubernetes-gosample:latest
+        - name: hello-app
+          image: quay.io/baijum/hello-app:latest
           ports:
-            - containerPort: 8090
+            - containerPort: 8080
